@@ -1,5 +1,5 @@
 .nav-header {
-  background-color: #272727;
+  background-color: #13284b;
   background-size: cover;
   width: 100%;
   min-height: 16vh;
@@ -42,7 +42,15 @@
   font-weight: 700;
   display: none;
 }
-
+.tech-header {
+  color: #ffffff;
+  font-size: 28px;
+  font-family: 'Roboto';
+}
+.tech-para {
+  color: #ffffff;
+  font-size: 16px;
+}
 @media screen and (min-width: 768px) {
   .nav-link {
     display: block;

@@ -173,8 +173,8 @@ class Jobs extends Component {
               src={profileImageUrl}
               alt="profile"
             />
-            <h1 className="user-profile-name">{name}</h1>
-            <p className="user-profile-para">{shortBio}</p>
+            <h1 className="user-profile-name">G Dinesh</h1>
+            <p className="user-profile-para">Front End Developer</p>
           </div>
         ) : (
           <div className="profile-failure-container">

@@ -60,7 +60,6 @@
 .location-package-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .location-job-type-container {

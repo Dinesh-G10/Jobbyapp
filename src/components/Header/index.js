@@ -15,11 +15,10 @@ const Header = props => {
   return (
     <nav className="nav-header">
       <div className="nav-website-content">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-          alt="website logo"
-          className="website-desktop-logo"
-        />
+        <div className="heading website-desktop-logo">
+          <h1 className="tech-header">TechForing</h1>
+          <p className="tech-para">Shaping Tomorrows Cybersecurity</p>
+        </div>
         <ul className="website-nav-menu">
           <Link to="/">
             <li className="nav-link">Home</li>
@@ -37,11 +36,11 @@ const Header = props => {
         </button>
       </div>
       <div className="nav-menu-mobile">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-          alt="website logo"
-          className="navbar-image-mobile"
-        />
+        <div className="heading nav-menu-item-mobile">
+          <h1 className="tech-header">TechForing</h1>
+          <p className="tech-para">Shaping Tomorrows Cybersecurity</p>
+        </div>
+
         <ul className="nav-menu-list-mobile">
           <Link to="/">
             <li>

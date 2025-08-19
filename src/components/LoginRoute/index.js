@@ -3,6 +3,16 @@ import Cookies from 'js-cookie'
 import {Redirect} from 'react-router-dom'
 import './index.css'
 
+const validUser = {
+  username: 'Dinesh',
+  password: 'Dinesh@2025',
+}
+
+const dummyToken =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.' +
+  'eyJ1c2VybmFtZSI6ImRpbmVzaCIsImlhdCI6MTY5MjAwMDAwMH0.' +
+  'abc123xyzFakeSignature'
+
 class LoginRoute extends Component {
   state = {
     username: '',
@@ -20,6 +30,7 @@ class LoginRoute extends Component {
   }
 
   onSubmitSuccess = jwtToken => {
+    console.log(jwtToken)
     const {history} = this.props
     Cookies.set('jwt_token', jwtToken, {
       expires: 30,
@@ -46,7 +57,6 @@ class LoginRoute extends Component {
 
     const fetchData = await fetch(url, options)
     const response = await fetchData.json()
-    console.log(fetchData)
     if (fetchData.ok === true) {
       this.onSubmitSuccess(response.jwt_token)
     } else {
@@ -86,7 +96,7 @@ class LoginRoute extends Component {
             <input
               value={password}
               onChange={this.onChangePassword}
-              type="password"
+              type="text"
               className="input-search"
               id="password"
               placeholder="Password"
